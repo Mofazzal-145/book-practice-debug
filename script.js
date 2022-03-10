@@ -114,7 +114,7 @@ const createCard = (book) => {
     />
     <div class="button-container">
       <button onclick="addToWishlist('${book.id}')" class="button"><i class="fa-solid fa-heart"></i></button>
-      <button onclick="AddToCart" class="button">Add To Cart</button>
+      <button onclick="addToCart('${book.id}')" class="button">Add To Cart</button>
     </div>
   </div>
   <div class="info-container">
@@ -144,7 +144,8 @@ const addToWishlist = (id) => {
 
 const displayCart = () => {
   const cart = getCartItems();
-  console.log(cart);
+  document.getElementById("cart").innerText = '';
+  // console.log(cart);
 
   cart.forEach((book) => {
     const div = createCard(book);
@@ -154,7 +155,7 @@ const displayCart = () => {
 
 const displayWishlist = () => {
   // no : 5
-  document.getElementById("wishlist").innerHTML = '';
+  document.getElementById("wishlist").innerText = '';
   const wishlist = getWishlistItems();
   // console.log(wishlist);
 
