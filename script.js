@@ -104,9 +104,7 @@ const createCard = (book) => {
  else{
    overview = book.overview;
  }
-
-
- console.log(overview);
+//  console.log(overview);  
   // no : 1
   div.innerHTML = `
   <div class="image-container">
@@ -157,7 +155,9 @@ const displayWishlist = () => {
   const wishlist = getWishlistItems();
   console.log(wishlist);
 
-  bookList.forEach((book) => {
+  // no : 4
+//  bookList.forEach((book) => {
+    wishlist.forEach((book) => {
     const div = createCard(book);
     document.getElementById("wishlist").appendChild(div);
   });
