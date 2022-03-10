@@ -138,6 +138,7 @@ const addToCart = (id) => {
 const addToWishlist = (id) => {
   if (wishlistItems.indexOf(id) === -1) {
     wishlistItems.push(id);
+    console.log(wishlistItems)
   }
 };
 
@@ -152,8 +153,10 @@ const displayCart = () => {
 };
 
 const displayWishlist = () => {
+  // no : 5
+  document.getElementById("wishlist").innerHTML = '';
   const wishlist = getWishlistItems();
-  console.log(wishlist);
+  // console.log(wishlist);
 
   // no : 4
 //  bookList.forEach((book) => {
