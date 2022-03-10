@@ -88,7 +88,7 @@ const showBooks = (books) => {
 };
 
 const createCard = (book) => {
-  console.log(book);
+  // console.log(book);
   const div = document.createElement("div");
   div.classList.add("card");
 
@@ -96,10 +96,17 @@ const createCard = (book) => {
 
   // no : 3
  let overview;
+
  if(book.overview.length > 100) {
    overview = book.overview.slice(0, 100) + "...";
  }
+ // no : 2
+ else{
+   overview = book.overview;
+ }
 
+
+ console.log(overview);
   // no : 1
   div.innerHTML = `
   <div class="image-container">
